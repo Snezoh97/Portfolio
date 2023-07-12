@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinelizwi Ntaku Profile</title>
+  <!-- icon -->
   <link href="images/icon.png" rel="icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-
+  
+  <!-- ===== Link Swiper's CSS ===== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  
   <!-- box icon -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Swiper CSS  -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
 </head>
 
@@ -30,6 +37,7 @@
 			<a href="#about">About</a>
 			<a href="#services">Services</a>
 			<a href="#portfolio">Portfolio</a>
+			<a href="#testimonials">Testimonials</a>
 			<a href="#contact">Contact</a>
 		</nav>
 	</header>
@@ -53,101 +61,127 @@
 				<a href="https://github.com/Snezoh97" title="GitHub"><i class='bx bxl-github'></i></a>
 				<a href="https://wa.me/message/HP4CKPENLFHKD1" title="WhatsApp"><i class='bx bxl-whatsapp' ></i></a>
 			</div>
-			<a href="#" class="btn">Hire Me</a>
+			<a href="resume/Resume Ntaku Sinelizwi.pdf" class="btn" title="Download Resume">Hire Me</a>
 		</div>
 		<div class="home-img">
-			<img src="images/Snezoh.png" alt="">
+			<img src="images/about-img.png" alt="">
 		</div>
 	</section>
 
 	<!-- About section design -->
-	<section class="about" id="about">
-		<div class="about-img">
-			<img src="images/about-img.png" alt="">
-		</div>
-		<div class="about-content">
-			<h2 class="heading">About <span>Me</span></h2>
-			<h3>Software Developer!</h3> 
-			<p>As a recent IT graduate specialized in Application Development, I bring technical expertise, 
-				innovative thinking, and effective collaboration. Proficient in Java, C#, Python, and JavaScript, 
-				I am ready to contribute to organizational success. Committed to continuous learning and staying 
-				updated with emerging technologies, I offer a fresh perspective, adaptability, and a strong work 
-				ethic in the fast-paced IT industry.</p>
-			<a href="#" class="btn">Read More</a>
+
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="images/about.png">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-tittle">About <span>Me</span></h1>
+					<p class="text">As a recent IT graduate specialized in Application Development, I bring technical expertise, 
+						innovative thinking, and effective collaboration. Proficient in Java, C#, Python, and JavaScript, 
+						I am ready to contribute to organizational success. Committed to continuous learning and staying 
+						updated with emerging technologies, I offer a fresh perspective, adaptability, and a strong work 
+						ethic in the fast-paced IT industry.
+					</p>
+
+					<!-- ---------- Tab Links --------  -->
+
+					<div class="tab-tittles">
+						<p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+						<p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+						<p class="tab-links" onclick="opentab('education', event)">Education</p>
+					</div>
+
+					<!-- ---------- Skills -----------  -->
+
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>UX/UI</span><br>Designing Websites for Schools and Applications.</li>
+							<li><span>Software Developer</span><br>Designing Applications using Python, Java, and JavaScript.</li>
+							<li><span>Web Developer</span><br>Developing Websites.</li>
+							<li><span>Multimedia artist</span><br>I specialize in creating visually appealing and engaging content for advertising campaigns.
+							</li>
+						</ul>
+					</div>
+
+					<!-- -------- Experience -------  -->
+
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>2023 - Current</span><br>Software Developer Intern at UVU Africa (CapaciTi).</li>
+							<li><span>2022 - 2022</span><br>Merchandiser at Super Spar in Butterworth, Eastern Cape.</li>
+							<li><span>2019 - Currently</span><br>I contribute part-time and co-own CrazY MediA FilM PTY (LTD), 
+								a photography and videography company.</li>
+						</ul>
+					</div>
+
+					<!-- -------- Education -------  -->
+
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2022</span><br>Advanced Diploma in Information and Communication Diploma in Application Development</li>
+							<li><span>2020</span><br>National Diploma in Information and Communication Technology</li>
+							<li><span>2016</span><br>National Senior Certificate</li>
+						</ul>
+					</div>
+					<br><br>
+					<a href="#contact" class="btn" title="Contact Me!">Let's us Chat</a>
+				</div>	
+			</div>
 		</div>
 	</section>
 
+	<!-- ---------------- Services design section ------------ -->
+
 	<secction class="services" id="services">
 		<h2 class="heading">My <span>Services</span></h2>
+		<div class="container-services">
+			<div class="services-containter">
+				<div class="services-box">
+					<i class='bx bx-code-alt'></i>
+					<h3>Web Development</h3>
+					<p> I have showcased my expertise in creating visually appealing and functional websites. 
+						With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
+					</p>
+					<a href="https://github.com/Snezoh97/Mzamomtsha_Website" title="Websites"><i class='bx bx-link-external' ></i></a>
+				</div>
 
-		<div class="services-containter">
-			<div class="services-box">
-				<i class='bx bx-code-alt'></i>
-				<h3>Web Development</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
-			</div>
+				<div class="services-box">
+					<i class='bx bxs-paint' ></i>
+					<h3>Software Developer</h3>
+					<p>As a software developer experienced in Java, Python, React, Node.js, JavaScript, and C#, I specialize in developing 
+						software applications and games. You can find some of my projects on my GitHub profile.
+					</p>
+					<a href="https://github.com/Snezoh97/Games_Mzamomtsha" title="Games"><i class='bx bx-link-external' ></i></a>
+				</div>
 
-			<div class="services-box">
-				<i class='bx bxs-paint' ></i>
-				<h3>Graphic Design</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
-			</div>
+				<div class="services-box">
+					<i class='bx bxl-python' ></i>
+					<h3>Python Developer</h3>
+					<p> A Python developer specializes in programming and software development using the Python language. 
+						They work on various projects, some of which are available on their GitHub repository. 
+					</p>
+					<a href="https://github.com/Snezoh97/Financial_Calculator" title="Calculator"><i class='bx bx-link-external' ></i></a>
+				</div>
 
-			<div class="services-box">
-				<i class='bx bx-code-alt'></i>
-				<h3>Software Developer</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
-			</div>
 
-			<div class="services-box">
-				<i class='bx bx-desktop'></i>
-				<h3>Software Engineer</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
-			</div>
-
-			<div class="services-box">
-				<i class='bx bx-desktop'></i>
-				<h3>Mobile Developer</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
-			</div>
-
-			<div class="services-box"> 
-				<i class='bx bx-desktop'></i>
-				<h3>Java Developer</h3>
-				<p> I have showcased my expertise in creating visually appealing and functional websites. 
-					With strong skills in HTML5, CSS, and JavaScript, I develop responsive and user-friendly interfaces. 
-					I also have experience in Adobe Photoshop for image editing.
-				</p>
-				<a href="#" class="btn">Read More</a>
+				<div class="services-box"> 
+					<i class='bx bxl-java'></i>
+					<h3>Java Developer</h3>
+					<p> Java developers use the Java language for programming and software development. Popular Java projects on 
+						GitHub include applications and tools developed using IDEs like NetBeans and Visual Studio Code.
+					</p>
+					<a href="https://github.com/Snezoh97/Unit_Converter" title="Convertor"><i class='bx bx-link-external' ></i></a>
+				</div>
 			</div>
 		</div>
 	</secction>
 
-	<!-- Portfolio section design -->
+	<!-- ------------------ Portfolio section design -------------- -->
 
 	<section class="portfolio" id="portfolio">
 		<h2 class="heading">Latest <span>Projects</span></h2>
-
 		<div class="portfolio-container">
 			<div class="portfolio-box">
 				<img src="images/fcalc.png" alt="">
@@ -156,17 +190,17 @@
 					<p>I have developed a Python-based finance calculator available on my GitHub. 
 						Feel free to explore the project on my GitHub for the code and details. 
 					</p>
-					<a href="https://github.com/Snezoh97/Financial_Calculator" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Financial_Calculator" title="Financial Calculator on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 			<div class="portfolio-box">
 				<img src="images/nexus.png" alt="">
 				<div class="portfolio-layer">
-					<h4>Nexus Financial Banking App</h4>
+					<h4>Financial Banking App</h4>
 					<p>I have a Python-based financial banking app, available on my GitHub profile. 
 						It provides secure banking features, and intuitive user interfaces for a streamlined banking experience. 
 					</p>
-					<a href="https://github.com/Snezoh97/Nexus_Financial_Banking_App" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Nexus_Financial_Banking_App" title="Financial Banking App on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 			<div class="portfolio-box">
@@ -176,7 +210,7 @@
 					<p>Python-based banking app on my GitHub profile for seamless financial transactions, including transfers, balance inquiries, and transaction history. 
 						Experience its power by exploring the code and functionalities. 
 					</p>
-					<a href="https://github.com/Snezoh97/Bank_App" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Bank_App" title="Bank App on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 			<div class="portfolio-box">
@@ -186,7 +220,7 @@
 					<p>I have developed a school website using HTML, CSS, and JavaScript, available on my GitHub. 
 						It offers essential information, and a visually appealing design for an engaging user experience. 
 					</p>
-					<a href="https://github.com/Snezoh97/Mzamomtsha_Website" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Mzamomtsha_Website" title="School website on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 			<div class="portfolio-box">
@@ -196,7 +230,7 @@
 					<p>Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities. 
 						Simplify conversions and enhance productivity with this open-source project. 
 					</p>
-					<a href="https://github.com/Snezoh97/Unit_Converter" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Unit_Converter" title="Unit Converter on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 			<div class="portfolio-box">
@@ -206,35 +240,206 @@
 					<p>Embark on exciting adventures with a collection of captivating games developed using HTML, CSS, and JavaScript. 
 						Explore my GitHub profile to discover the immersive gameplay and innovative designs. 
 					</p>
-					<a href="https://github.com/Snezoh97/Games_Mzamomtsha" title="Click here to view the project"><i class='bx bx-link-external' ></i></a>
+					<a href="https://github.com/Snezoh97/Games_Mzamomtsha" title="Games on GitHub"><i class='bx bx-link-external' ></i></a>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	<!-- Contact Section  -->
-<section class="contact" id="contact">
-	<h2 class="heading">Contact <span>Me!</span></h2>
 
-	<form>
-		<div class="input-box">
-			<input type="text" placeholder="Full Name" id="name">
-			<input type="email" placeholder="Email Address" id="email">
+	<!-- ------------- Testimonials ----------------  -->
+
+	<section class="testimonials" id="testimonials">
+	 	<h2>Testimo<span>nials</span></h2>
+		<div class="swiper mySwiper container">
+			<div class="swiper-wrapper content">
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/about-img.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>
+
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/test1.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/snezoh.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>				 
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/test1.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/snezoh.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/test1.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/about-img.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>
+				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/test1.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-github"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>
+				  
+				</div>
+			  </div>
+			  <div class="swiper-slide card">
+				<div class="card-content">
+					<div class="image">
+						<img src="images/about-img.png" alt=""> 
+					</div>
+					<div class="media-icons">
+						<a href="" title="Facebook"><i class="fab fa-linkedin"></i></a>
+						<a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="" title="Instagram"><i class="fab fa-github"></i></a>
+					</div>
+					<div class="name-profession">
+						<span class="name">Sinelizwi Ntaku</span>
+						<p><i class='bx bxs-quote-left qoutes' class="profession"></i> Explore my Java-based unit converter on GitHub, a versatile tool for converting various measurements and quantities.
+							<i class='bx bxs-quote-right qoutes'></i></p>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
 		</div>
-		<div class="input-box">
-			<input type="number" placeholder="Mobile Number" id="mobile">
-			<input type="text" placeholder="Email Subject" id="subject">
-		</div>
-		<textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-		<input type="button" onclick="SendEmail()" value="Send Message" class="btn">
-	</form>
-</section>
+		  	<!-- <div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>-->
+			<div class="swiper-pagination"></div>
+
+	  </section>
+	  	
+	<!-- Contact Section  -->
+	<section class="contact" id="contact">
+		<h2 class="heading">Contact <span>Me!</span></h2>
+
+		<form>
+			<div class="input-box">
+				<input required="" type="text" name="text" placeholder="Full Name" autocomplete="off" id="name">
+				<input type="email" placeholder="Email Address" autocomplete="off" id="email">
+			</div>
+			<div class="input-box">
+				<input type="number" placeholder="Mobile Number" autocomplete="off" id="mobile">
+				<input type="text" placeholder="Email Subject" autocomplete="off" id="subject">
+			</div>
+			<textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" autocomplete="off"></textarea>
+			<input type="button" onclick="SendEmail()" value="Send Message" class="btn">
+		</form>
+	</section>
 
 	<!-- Footer design -->
 
 	<footer class="footer">
 		<div class="footer-text">
-			<p>Copyright &copy; 2023 By Sinelizwi Ntaku | All Right Reserved.</p>
+			<p>Copyright &copy; 2023 Developed By Sinelizwi Ntaku | All Right Reserved.</p>
 		</div>
 		<div class="footer-iconTop">
 			<a href="#home" title="Click to go top again"><i class='bx bx-up-arrow-alt'></i></a>
@@ -245,6 +450,8 @@
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<!-- scroll reveal -->
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<!-- Swiper Js -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<!-- typed script -->
 	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 	<!-- Custom js -->
